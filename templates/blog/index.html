@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+ {% block heading %}
+        <h1>Blog</h1>
+        <hr class="small">
+        <span class="subheading">“If you want to be a writer, you must do two things above all: Read a lot and write a lot”</span>
+        
+{% endblock %}
+
+
+{% block content %}
+    {% for article in articles %}
+    <!-- <h1>helo</h1> -->
+<!-- <div class="container"> -->
+        <!-- <div class="row"> -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            <a href="{% url 'blog:detail' slug=article.slug %}">{{ article.title }}</a>
+                        </h2>
+                        <p class="post-subtitle">
+                            {{ article.info }} ...<a href="{% url 'blog:detail' slug=article.slug %}"><button class="btn btn">Read More >></button></a> 
+                        </p>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">{{ article.author }}</a> on {{ article.date }} - {{ article.time }}</p>
+                </div>
+                <hr>
+    {% endfor %}
+{% endblock %}

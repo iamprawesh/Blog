@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block heading %}
+        <h2 class="h2-title">{{ article.title }}</h2>
+        <hr class="small">
+{% endblock %}
+
+
+{% block content %}
+        <div class=" container article-detail">
+                <div class="head-detail">
+                        <!-- <h2 class="dtl-title text-capitalize">{{ article.title }}</h2> -->
+                        <p>Posted By : {{ article.author }} on {{ article.date }} </p>
+
+                </div>
+        <img src="{{ article.thumnail.url }}"/>
+        <!-- <img src="/media/Capture.JPG"> -->
+        <span>{{article.typo}}</span>
+        <p>{{ article.body }} ...</p>
+        <p>{{ article.date }}</p>
+    </div>
+{% endblock %}
