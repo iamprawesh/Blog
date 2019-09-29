@@ -26,7 +26,7 @@ SECRET_KEY = 'n1oltav_v-ep=j@3nz1j!7uhia*n-h%98af(a!$9qc#spk%)y%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://blogtry.herokuapp.com/']
 
 
 # Application definition
